@@ -20,7 +20,7 @@ angular.module('bc-vda')
           timestamp: time,
           transaction_id: transaction.transactionId,
           transaction_type: type,
-          transaction_submitter: type === 'SetupDemo' ? 'Liam Grace' : 'Arium Vehicles'
+          transaction_submitter: type === 'SetupDemo' ? 'Liam Grace' : 'Cow Milk'
         });
 
         return {
@@ -70,7 +70,7 @@ angular.module('bc-vda')
       }
 
       var order = JSON.parse(event.data);
-      $scope.addBlock(order.transactionId, 'PlaceOrder', 'Arium Vehicles');
+      $scope.addBlock(order.transactionId, 'PlaceOrder', 'Cow Milk');
       $scope.$apply();
     }
   }
@@ -96,7 +96,7 @@ angular.module('bc-vda')
         return;
       }
       var status = JSON.parse(event.data);
-      $scope.addBlock(status.transactionId, 'UpdateOrderStatus', 'Arium Vehicles', status.orderStatus);
+      $scope.addBlock(status.transactionId, 'UpdateOrderStatus', 'Cow Milk', status.orderStatus);
       $scope.$apply();
     }
   }
