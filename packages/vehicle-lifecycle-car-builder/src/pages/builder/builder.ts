@@ -92,16 +92,15 @@ export class BuilderPage {
 
   purchase() {
     var vehicleDetails = {
-      make: 'Arium',
+      make: 'InfantFormula',
       modelType: this.car.name,
-      colour: this.states.colour,
       VIN: ''
     };
 
     var order = {
       $class: 'org.acme.vehicle.lifecycle.manufacturer.PlaceOrder',
       vehicleDetails: vehicleDetails,
-      manufacturer: 'resource:org.acme.vehicle.lifecycle.manufacturer.Manufacturer#Arium',
+      manufacturer: 'resource:org.acme.vehicle.lifecycle.manufacturer.Manufacturer#InfantFormula',
       orderer: 'resource:org.acme.vehicle.lifecycle.PrivateOwner#dan',
       orderId: this.generateID()
     };

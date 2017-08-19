@@ -4,7 +4,7 @@
   <h1>
     Dashboard
     <div class="search">
-      <input type="text" name="search" placeholder="Search Arium"></input>
+      <input type="text" name="search" placeholder="Search"></input>
       <img src="../../../assets/images/paul.png" alt="Profile">
     </div>
   </h1>
@@ -19,7 +19,7 @@
             <div class="card-header">
               <div>
                 <h5>Order</h5>
-                <h3><strong>Arium</strong> {{order.car.name}}</h3>
+                <h3><strong>InfantFormula</strong> {{order.car.name}}</h3>
 
                 <p style="margin-bottom: 5px;">{{order.placed | date : 'dd MMM yyyy'}}</p>
                 <p style="margin: 0 0 5px;">{{order.car.serial}}</p>
@@ -46,23 +46,23 @@
 
             <ul>
               <li class="status" ng-class="order.manufacture.chassis ? 'status-green' : 'status-red'">
-                <span>Chassis</span>
+                <span>Produced</span>
                 <span class="date fade">{{order.manufacture.chassis | relativeDate : order.placed}}</span>
               </li>
               <li class="status" ng-class="order.manufacture.vinIssue ? 'status-green' : 'status-red'">
-                <span>VIN Issue</span>
+                <span>Laser QR Tag</span>
                 <span class="date fade">{{order.manufacture.vinIssue | relativeDate : order.placed}}</span>
               </li>
               <li class="status" ng-class="order.manufacture.vinPrinting ? 'status-green' : 'status-red'">
-                <span>Owner Assigned</span>
+                <span>Xray</span>
                 <span class="date fade">{{order.manufacture.vinPrinting | relativeDate : order.placed}}</span>
               </li>
               <li class="status" ng-class="order.manufacture.interior ? 'status-green' : 'status-red'">
-                <span>Interior</span>
+                <span>Photo</span>
                 <span class="date fade">{{order.manufacture.interior | relativeDate : order.placed}}</span>
               </li>
               <li class="status" ng-class="order.manufacture.paint ? 'status-green' : 'status-red'">
-                <span>Paint</span>
+                <span>Packaged</span>
                 <span class="date fade">{{order.manufacture.paint | relativeDate : order.placed}}</span>
               </li>
             </ul>

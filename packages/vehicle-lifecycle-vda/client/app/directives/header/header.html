@@ -1,8 +1,7 @@
 <div class="bc-vda-header">
   <div class="bc-vda-logo" ui-sref="dashboard">
-    <img src="assets/images/VDA_Logo.svg"/>
-    <p>Vehicle &<br>
-    Drivers<br>
+    <p>Food<br>
+    Certification<br>
     Authority</p>
   </div>
 
@@ -16,7 +15,7 @@
   </div>
   <div class="bc-vda-header-stats-container">
     <div class="bc-vda-stats-item">
-      <p class="bc-vda-stats-item-header">REGISTERED VEHICLES</p>
+      <p class="bc-vda-stats-item-header">REGISTERED PRODUCTS</p>
       <div class="bc-vda-item-value-container">
         <p class="bc-vda-stats-item-value">{{registered_vehicles | number:0}}</p>
         <img src="assets/images/up.svg" class="bc-vda-stats-item-arrow" />
@@ -24,7 +23,7 @@
 
     </div>
     <div class="bc-vda-stats-item">
-      <p class="bc-vda-stats-item-header">VIN ASSIGNED</p>
+      <p class="bc-vda-stats-item-header">QR ASSIGNED</p>
       <div class="bc-vda-item-value-container">
         <p class="bc-vda-stats-item-value">{{vin_assigned | number:0}}</p>
         <img src="assets/images/up.svg" class="bc-vda-stats-item-arrow" />
@@ -32,7 +31,7 @@
 
     </div>
     <div class="bc-vda-stats-item">
-      <p class="bc-vda-stats-item-header">OWNER ISSUED</p>
+      <p class="bc-vda-stats-item-header">CERTIFICATES ISSUED</p>
       <div class="bc-vda-item-value-container">
         <p class="bc-vda-stats-item-value">{{v5c_issued | number:0}}</p>
         <img src="assets/images/up.svg" class="bc-vda-stats-item-arrow" />
@@ -40,7 +39,7 @@
 
     </div>
     <div class="bc-vda-stats-item" ng-class="{active:isActive('/suspicious_vehicles')}" ui-sref="suspicious_vehicles">
-      <p class="bc-vda-stats-item-header">SUSPICIOUS VEHICLES</p>
+      <p class="bc-vda-stats-item-header">SUSPICIOUS SCANS</p>
       <div class="bc-vda-item-value-container">
         <p class="bc-vda-stats-item-value">{{suspicious_vehicles | number:0}}</p>
         <img src="assets/images/down.svg" class="bc-vda-stats-item-arrow" />

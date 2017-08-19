@@ -4,18 +4,18 @@
   <div class="header-background"></div>
 
   <ion-card class="margin-card">
-    <h3>Car</h3>
-    <h2><strong>Arium</strong> {{car.name}}</h2>
+    <h3>CAN</h3>
+    <h2><strong>InfantFormula</strong> {{car.name}}</h2>
     <div class="car-details">
       <p class="opaque">
-        5 Door, All Wheel Drive, 90kw
+        Made in New Zealand
       </p>
       <p>
-        £29,900
+        £1,000
       </p>
     </div>
   </ion-card>
-
+<!--
   <ion-card class="animatedCard" [class.expandedCard]="selected === 'trim'">
     <h3 class="car-option" (click)="open('trim')">
       <img [hidden]="states['trim']" src="assets/circle_empty.svg">
@@ -29,7 +29,7 @@
         <div class="option-description">
           <h2>Standard</h2>
           <p>
-            A simple but elegant finishing trim for your Arium.
+            A simple but elegant finishing trim for your InfantFormula.
           </p>
         </div>
         <ion-badge [hidden]="states['trim'] === 'standard'" item-right color="dark">Free</ion-badge>
@@ -134,7 +134,7 @@
         <div class="option-description">
           <h2>Extended Warranty</h2>
           <p>
-            Total piece of mind for the perfect Arium motoring experience.
+            Total piece of mind for the perfect InfantFormula motoring experience.
           </p>
         </div>
         <ion-badge [hidden]="containsExtra('extended warranty')" item-right color="dark">+£150</ion-badge>
@@ -152,9 +152,9 @@
         <ion-badge [hidden]="!containsExtra('tinted windows')" item-right color="dark" class="selected"><img src="assets/tick.svg"></ion-badge>
       </div>
     </div>
-  </ion-card>
+  </ion-card> -->
 
   <ion-card (click)="purchase()">
-    <button ion-button color="secondary">Purchase and Build <img src="assets/arrow_right.svg"></button>
+    <button ion-button color="secondary">Purchase and Deliver <img src="assets/arrow_right.svg"></button>
   </ion-card>
 </ion-content>
