@@ -3,7 +3,11 @@ set -ev
 DIR="$( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd )"
 cd "${DIR}"
 
-cat install.sh.in | sed 's/{{ENV}}//g' > install.sh
+# Use our docker image for the car-builder app
+cat install.sh.in | sed 's/{{ENV}}//g' | \
+    sed 's/hyperledger\/vehicle-lifecycle-car-builder/faustro\/vehicle-lifecycle-car-builder/g' >\
+    install.sh
+
 echo "PAYLOAD:" >> install.sh
 tar czf - flows.json vehicle-lifecycle-network.bna docker-compose-playground.yml fabric-dev-servers >> install.sh
 
